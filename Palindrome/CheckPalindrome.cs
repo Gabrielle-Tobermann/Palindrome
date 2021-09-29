@@ -6,11 +6,24 @@ using System.Threading.Tasks;
 
 namespace Palindrome
 {
-    class CheckPalindrome
+    public class CheckPalindrome
     {
-        public void isAPalindrome(string words)
+        public bool IsAPalindrome(string words)
         {
+            bool result = false;
+            List<string> wordsList = words.Split(" ").ToList();
 
+            var wordsCombined = string.Join("", wordsList).ToLower();
+
+            var reversed = wordsCombined.Reverse();
+
+            var reversedWords = string.Join("", reversed);
+            
+            if (reversedWords == wordsCombined)
+            {
+                result = true;
+            }
+            return result;
         }
     }
 }

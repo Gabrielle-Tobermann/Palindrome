@@ -6,7 +6,8 @@ namespace Palindrome
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var check = new CheckPalindrome();
+            check.IsAPalindrome("No x in Nixon");
         }
     }
 }
